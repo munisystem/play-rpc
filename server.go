@@ -8,8 +8,9 @@ import (
 
 type Arith int
 
-func (a *Arith) Fib(n int, reply *int) {
+func (t *Arith) Fib(n int, reply *int) error {
 	*reply = FibTail(n)
+	return nil
 }
 
 func FibTail(n int, a ...int) int {
